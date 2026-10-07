@@ -1,0 +1,1071 @@
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws & Tails | Ultra Pet Store, Grooming Spa & Vet Clinic</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c'
+                        },
+                        amber: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706'
+                        },
+                        emerald: {
+                            50: '#ecfdf5',
+                            500: '#10b981',
+                            600: '#059669'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Fredoka', 'cursive'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 3.5s ease-in-out infinite',
+                        'bounce-subtle': 'bounceSubtle 2s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' }
+                        },
+                        bounceSubtle: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-5px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Fredoka', cursive;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(16px);
+        }
+        .dark .glass-nav {
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(16px);
+        }
+        .product-card:hover .product-img {
+            transform: scale(1.08);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.03);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(245, 158, 11, 0.4);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="text-slate-800 dark:text-slate-100 bg-[#fdfbf7] dark:bg-slate-950 flex flex-col min-h-screen selection:bg-amber-200 selection:text-amber-900">
+
+    <div class="bg-gradient-to-r from-emerald-800 via-emerald-600 to-amber-600 text-white text-xs md:text-sm py-2 px-4 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-2 font-medium">
+                <span class="bg-emerald-900/60 text-emerald-200 px-2.5 py-0.5 rounded-full text-[11px] font-bold border border-emerald-400/30 flex items-center gap-1">
+                    <i class="fa-solid fa-lock text-emerald-300"></i> HTTPS SECURE
+                </span>
+                <span class="hidden sm:inline"><i class="fa-solid fa-truck-fast text-amber-300 mr-1"></i> Free Express Delivery on orders over $49 at Paws &amp; Tails!</span>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-semibold">
+                <a href="tel:+15557297824" class="hover:text-amber-200 transition-colors flex items-center gap-1">
+                    <i class="fa-solid fa-phone"></i> +1 (555) 729-7824
+                </a>
+                <a href="https://wa.me/15557297824" target="_blank" class="hover:text-emerald-200 transition-colors flex items-center gap-1 text-emerald-300">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-40 glass-nav border-b border-amber-100/80 dark:border-slate-800 shadow-sm transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 gap-4">
+                
+                <!-- Brand Logo -->
+                <a href="#home" class="flex items-center gap-3 shrink-0 group">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-500 via-amber-400 to-brand-500 text-white flex items-center justify-center text-2xl shadow-lg shadow-amber-500/30 group-hover:rotate-12 transition-transform">
+                        <i class="fa-solid fa-paw"></i>
+                    </div>
+                    <div>
+                        <span class="font-heading text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight block leading-none">Paws &amp; Tails</span>
+                        <span class="text-[10px] text-amber-600 dark:text-amber-400 font-bold tracking-widest uppercase block mt-1">Pet Shop &amp; Care Clinic</span>
+                    </div>
+                </a>
+
+                <!-- Search Bar Desktop -->
+                <div class="hidden md:flex flex-1 max-w-md mx-4 relative">
+                    <input type="text" id="searchInput" onkeyup="handleSearch()" placeholder="Search dog food, cat toys, bird seeds, aquatics..." 
+                           class="w-full pl-10 pr-10 py-2.5 rounded-2xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-100 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-sm"></i>
+                    <button onclick="clearSearch()" id="clearSearchBtn" class="hidden absolute right-3 top-3 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-5 font-semibold text-sm text-slate-700 dark:text-slate-200">
+                    <a href="#home" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Home</a>
+                    <a href="#shop" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Shop</a>
+                    <a href="#services" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Services</a>
+                    <a href="#quiz" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Quiz</a>
+                    <a href="#adopt" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Adopt</a>
+                    <a href="#gallery" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Gallery</a>
+                    <a href="#reviews" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Reviews</a>
+                    <a href="#contact" class="hover:text-amber-600 dark:hover:text-amber-400 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Header Action Buttons -->
+                <div class="flex items-center gap-2.5">
+                    
+                    <button onclick="toggleDarkMode()" class="p-2.5 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all" title="Toggle Theme">
+                        <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                        <i class="fa-solid fa-sun hidden dark:block text-lg"></i>
+                    </button>
+
+                    <button onclick="toggleWishlistModal()" class="relative p-2.5 rounded-2xl bg-amber-50 dark:bg-slate-800 hover:bg-amber-100 text-rose-500 transition-all border border-amber-200/50 dark:border-slate-700" title="Wishlist">
+                        <i class="fa-solid fa-heart text-xl"></i>
+                        <span id="wishlistCount" class="absolute -top-1.5 -right-1.5 bg-rose-500 text-white text-[10px] font-extrabold w-5 h-5 rounded-full flex items-center justify-center shadow">0</span>
+                    </button>
+
+                    <button onclick="toggleCartModal()" class="relative p-2.5 rounded-2xl bg-amber-50 dark:bg-slate-800 hover:bg-amber-100 text-amber-600 dark:text-amber-400 transition-all border border-amber-200/50 dark:border-slate-700" title="Cart">
+                        <i class="fa-solid fa-basket-shopping text-xl"></i>
+                        <span id="cartCount" class="absolute -top-1.5 -right-1.5 bg-emerald-500 text-white text-[10px] font-extrabold w-5 h-5 rounded-full flex items-center justify-center shadow">0</span>
+                    </button>
+
+                    <button onclick="openBookingModal()" class="hidden xl:flex px-4 py-2.5 rounded-2xl bg-gradient-to-r from-amber-500 to-brand-500 hover:from-amber-600 hover:to-brand-600 text-white font-bold text-xs uppercase tracking-wider shadow-md shadow-amber-500/20 transition-all transform hover:-translate-y-0.5 items-center gap-2">
+                        <i class="fa-solid fa-calendar-plus"></i> Book Visit
+                    </button>
+
+                    <button id="mobileMenuBtn" class="p-2.5 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 text-xl lg:hidden">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search Bar Mobile -->
+            <div class="pb-3 md:hidden">
+                <div class="relative">
+                    <input type="text" id="mobileSearchInput" onkeyup="handleMobileSearch()" placeholder="Search products for dogs, cats, birds..." 
+                           class="w-full pl-9 pr-8 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-100 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white dark:bg-slate-900 border-b border-amber-100 dark:border-slate-800 px-6 py-6 space-y-4 shadow-xl">
+            <a href="#home" class="mobile-link block text-base font-bold text-slate-800 dark:text-slate-100 hover:text-amber-600">Home</a>
+            <a href="#shop" class="mobile-link block text-base font-bold text-slate-800 dark:text-slate-100 hover:text-amber-600">Pet Shop</a>
+            <a href="#services" class="mobile-link block text-base font-bold text-slate-800 dark:text-slate-100 hover:text-amber-600">Grooming &amp; Vet Care</a>
+            <a href="#quiz" class="mobile-link block text-base font-bold text-slate-800 dark:text-slate-100 hover:text-amber-600">Pet Matchmaker Quiz</a>
+            <a href="#adopt" class="mobile-link block text-base font-bold text-slate-800 dark:text-slate-100 hover:text-amber-600">Pet Adoption</a>
+            <a href="#gallery" class="mobile-link block text-base font-bold text-slate-800 dark:text-slate-100 hover:text-amber-600">Photo Gallery</a>
+            <a href="#reviews" class="mobile-link block text-base font-bold text-slate-800 dark:text-slate-100 hover:text-amber-600">Customer Reviews</a>
+            <a href="#contact" class="mobile-link block text-base font-bold text-slate-800 dark:text-slate-100 hover:text-amber-600">Contact &amp; Store Location</a>
+            <button onclick="openBookingModal()" class="w-full py-3 rounded-2xl bg-amber-500 text-white font-bold text-sm shadow-md">
+                Book Grooming / Vet Visit
+            </button>
+        </div>
+    </header>
+
+    <section id="home" class="relative py-12 lg:py-20 overflow-hidden bg-gradient-to-b from-amber-100/50 via-[#fdfbf7] to-[#fdfbf7] dark:from-slate-900 dark:via-slate-950 dark:to-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-100 dark:bg-slate-800 text-amber-800 dark:text-amber-300 font-semibold text-xs md:text-sm border border-amber-200 dark:border-slate-700 shadow-sm">
+                        <i class="fa-solid fa-heart text-red-500 animate-pulse"></i>
+                        <span>Welcome to <strong>Paws &amp; Tails</strong> Pet Kingdom</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-slate-900 dark:text-white leading-tight">
+                        Healthy Pets, <span class="text-amber-500 dark:text-amber-400">Happy Tails</span> &amp; Joyful Homes
+                    </h1>
+
+                    <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
+                        Explore organic nutrition, interactive toys, luxury grooming spa, top-rated veterinary care, and adoptable pets—all crafted with love for your best friends!
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#shop" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-amber-500 to-brand-500 hover:from-amber-600 hover:to-brand-600 text-white font-bold text-base shadow-lg shadow-amber-500/30 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-bag-shopping"></i> Shop Pet Supplies
+                        </a>
+                        <button onclick="openBookingModal()" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:border-amber-400 text-slate-800 dark:text-slate-100 font-bold text-base transition-all flex items-center justify-center gap-2 shadow-sm">
+                            <i class="fa-solid fa-scissors text-amber-500"></i> Book Spa &amp; Vet Clinic
+                        </button>
+                    </div>
+
+                    <div class="pt-8 border-t border-slate-200 dark:border-slate-800 grid grid-cols-3 gap-4">
+                        <div>
+                            <p class="font-heading text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">12,500+</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Happy Pets Served</p>
+                        </div>
+                        <div>
+                            <p class="font-heading text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">100%</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Organic &amp; Safe</p>
+                        </div>
+                        <div>
+                            <p class="font-heading text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">4.9 ★</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Top Rated Spa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800">
+                        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1000&q=80" alt="Paws & Tails Dog" class="w-full h-[380px] md:h-[460px] object-cover">
+                    </div>
+                    
+                    <div class="absolute -bottom-6 -left-6 z-20 bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-xl flex items-center gap-4 border border-amber-100 dark:border-slate-700 animate-float">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-shield-cat"></i>
+                        </div>
+                        <div>
+                            <p class="font-heading font-bold text-slate-900 dark:text-white text-sm">Paws &amp; Tails Care</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Certified Vets &amp; Groomers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="py-16 bg-white dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-8 gap-4">
+                <div>
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-amber-600 bg-amber-100 dark:bg-slate-800 px-3 py-1 rounded-full">Paws &amp; Tails Store</span>
+                    <h2 class="text-3xl font-heading font-bold text-slate-900 dark:text-white mt-2">Explore Pet Supplies &amp; Food</h2>
+                </div>
+                
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="filterCategory('all', event)" class="cat-filter-btn active px-3.5 py-2 rounded-xl text-xs font-bold bg-amber-500 text-white transition-all shadow-sm">All Items</button>
+                    <button onclick="filterCategory('dogs', event)" class="cat-filter-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-amber-100 transition-all"><i class="fa-solid fa-dog mr-1"></i> Dogs</button>
+                    <button onclick="filterCategory('cats', event)" class="cat-filter-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-amber-100 transition-all"><i class="fa-solid fa-cat mr-1"></i> Cats</button>
+                    <button onclick="filterCategory('birds', event)" class="cat-filter-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-amber-100 transition-all"><i class="fa-solid fa-dove mr-1"></i> Birds</button>
+                    <button onclick="filterCategory('small', event)" class="cat-filter-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-amber-100 transition-all"><i class="fa-solid fa-otter mr-1"></i> Small Pets</button>
+                    <button onclick="filterCategory('fish', event)" class="cat-filter-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-amber-100 transition-all"><i class="fa-solid fa-fish mr-1"></i> Fish</button>
+                </div>
+            </div>
+
+            <!-- Sorting & Filter Control -->
+            <div class="flex flex-wrap items-center justify-between bg-slate-50 dark:bg-slate-900 p-4 rounded-2xl mb-8 border border-slate-200 dark:border-slate-800 gap-4 text-xs font-semibold">
+                <div id="productCountLabel" class="text-slate-600 dark:text-slate-400">Showing all items</div>
+                <div class="flex items-center gap-3">
+                    <label class="text-slate-500">Sort By:</label>
+                    <select id="sortSelect" onchange="handleSortChange()" class="px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 focus:outline-none">
+                        <option value="featured">Featured</option>
+                        <option value="low">Price: Low to High</option>
+                        <option value="high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Product Card Grid Container -->
+            <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Javascript populates items here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 bg-amber-50/50 dark:bg-slate-900/50 border-y border-amber-200/50 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-amber-600 bg-amber-100 dark:bg-slate-800 px-3 py-1 rounded-full">Paws &amp; Tails Clinic &amp; Spa</span>
+                <h2 class="text-3xl font-heading font-bold text-slate-900 dark:text-white mt-2">Professional Care Services</h2>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Hygienic baths, haircuts, nail trimming, vet consultations, and pet boarding.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-sm border border-amber-100 dark:border-slate-700 hover:shadow-xl transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-100 dark:bg-slate-700 text-amber-600 dark:text-amber-400 flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-shower"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white mb-2">Luxury Spa &amp; Grooming</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed mb-4">Herbal baths, de-shedding, ear cleaning, paw massage, and custom breed styling.</p>
+                    </div>
+                    <button onclick="openBookingModal('Grooming Spa')" class="w-full py-3 rounded-xl bg-amber-50 dark:bg-slate-700 hover:bg-amber-500 hover:text-white text-amber-600 dark:text-amber-300 font-bold text-xs transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-calendar-check"></i> Schedule Spa Visit
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-sm border border-amber-100 dark:border-slate-700 hover:shadow-xl transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-100 dark:bg-slate-700 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-stethoscope"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white mb-2">Veterinary Wellness</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed mb-4">Routine physical checkups, vaccinations, parasite control, and microchipping.</p>
+                    </div>
+                    <button onclick="openBookingModal('Vet Consultation')" class="w-full py-3 rounded-xl bg-emerald-50 dark:bg-slate-700 hover:bg-emerald-600 hover:text-white text-emerald-600 dark:text-emerald-300 font-bold text-xs transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-calendar-check"></i> Book Vet Visit
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl shadow-sm border border-amber-100 dark:border-slate-700 hover:shadow-xl transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-sky-100 dark:bg-slate-700 text-sky-600 dark:text-sky-400 flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-hotel"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white mb-2">Pet Resort &amp; Hotel</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed mb-4">Climate-controlled suites, daily playtimes, live camera updates, and organic meals.</p>
+                    </div>
+                    <button onclick="openBookingModal('Pet Boarding Hotel')" class="w-full py-3 rounded-xl bg-sky-50 dark:bg-slate-700 hover:bg-sky-600 hover:text-white text-sky-600 dark:text-sky-300 font-bold text-xs transition-all flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-calendar-check"></i> Reserve Boarding Suite
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="py-16 bg-white dark:bg-slate-950">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="bg-gradient-to-br from-amber-500/10 via-amber-100/30 to-brand-500/10 dark:from-slate-900 dark:to-slate-900 p-8 rounded-3xl shadow-xl border border-amber-200/60 dark:border-slate-800 text-center">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-amber-600 bg-amber-100 dark:bg-slate-800 px-3 py-1 rounded-full">Interactive Feature</span>
+                <h2 class="text-2xl sm:text-3xl font-heading font-bold text-slate-900 dark:text-white mt-3">Pet Matchmaker Quiz</h2>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Find the optimal diet, toy &amp; care setup tailored for your companion in 30 seconds.</p>
+
+                <div id="quizContainer" class="mt-8 text-left max-w-xl mx-auto">
+                    <div id="quizStep1" class="space-y-4">
+                        <h3 class="font-bold text-slate-800 dark:text-slate-200 text-sm">Step 1: Choose your pet companion:</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <button onclick="selectQuizOption('dogs')" class="quiz-btn p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-amber-500 text-center font-bold text-xs hover:bg-amber-50 dark:hover:bg-slate-700 transition-all">
+                                <i class="fa-solid fa-dog text-amber-500 text-2xl block mb-2"></i> Dog / Puppy
+                            </button>
+                            <button onclick="selectQuizOption('cats')" class="quiz-btn p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-amber-500 text-center font-bold text-xs hover:bg-amber-50 dark:hover:bg-slate-700 transition-all">
+                                <i class="fa-solid fa-cat text-amber-500 text-2xl block mb-2"></i> Cat / Kitten
+                            </button>
+                            <button onclick="selectQuizOption('birds')" class="quiz-btn p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-amber-500 text-center font-bold text-xs hover:bg-amber-50 dark:hover:bg-slate-700 transition-all">
+                                <i class="fa-solid fa-dove text-amber-500 text-2xl block mb-2"></i> Bird
+                            </button>
+                            <button onclick="selectQuizOption('small')" class="quiz-btn p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-amber-500 text-center font-bold text-xs hover:bg-amber-50 dark:hover:bg-slate-700 transition-all">
+                                <i class="fa-solid fa-otter text-amber-500 text-2xl block mb-2"></i> Small Pet
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="quizResult" class="hidden text-center space-y-4 py-4">
+                        <div class="w-16 h-16 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto text-3xl">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white" id="quizResultTitle">Matched Products Ready!</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm" id="quizResultText">We filtered our store to highlight the perfect supplies for your friend.</p>
+                        <div class="flex justify-center gap-3">
+                            <a href="#shop" class="px-6 py-2.5 rounded-xl bg-amber-500 text-white font-bold text-xs uppercase tracking-wider shadow">View Filtered Store</a>
+                            <button onclick="resetQuiz()" class="px-6 py-2.5 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold text-xs uppercase tracking-wider">Reset Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="adopt" class="py-16 bg-amber-50/30 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-amber-600 bg-amber-100 dark:bg-slate-800 px-3 py-1 rounded-full">Paws &amp; Tails Adoption Haven</span>
+                <h2 class="text-3xl font-heading font-bold text-slate-900 dark:text-white mt-2">Find Your Forever Friend</h2>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">These rescued companions are looking for loving homes. Meet them today!</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Pet 1 -->
+                <div class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm border border-amber-100 dark:border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80" alt="Luna" class="w-full h-52 object-cover">
+                        <div class="p-5">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white">Luna</h3>
+                                <span class="bg-emerald-100 text-emerald-700 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full">Vaccinated</span>
+                            </div>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">Golden Retriever Mix • 1.5 Years Old • Female</p>
+                            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">Playful, extremely friendly with kids, loves outdoor games, and fully house-trained.</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <button onclick="openAdoptionModal('Luna')" class="w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs uppercase tracking-wider transition-colors shadow">
+                            Inquire for Adoption
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pet 2 -->
+                <div class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm border border-amber-100 dark:border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80" alt="Milo" class="w-full h-52 object-cover">
+                        <div class="p-5">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white">Milo</h3>
+                                <span class="bg-emerald-100 text-emerald-700 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full">Neutered</span>
+                            </div>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">Tabby Domestic Short Hair • 8 Months Old • Male</p>
+                            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">Gentle purr machine who loves warm lap naps and chasing teaser feather wands.</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <button onclick="openAdoptionModal('Milo')" class="w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs uppercase tracking-wider transition-colors shadow">
+                            Inquire for Adoption
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pet 3 -->
+                <div class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm border border-amber-100 dark:border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=600&q=80" alt="Coco" class="w-full h-52 object-cover">
+                        <div class="p-5">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white">Coco &amp; Pip</h3>
+                                <span class="bg-emerald-100 text-emerald-700 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full">Healthy Pair</span>
+                            </div>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mb-2">Lovebirds • 1 Year Old • Bonded Pair</p>
+                            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">Vibrant singing duo who love interactive swings and organic seed treats.</p>
+                        </div>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <button onclick="openAdoptionModal('Coco & Pip')" class="w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs uppercase tracking-wider transition-colors shadow">
+                            Inquire for Adoption
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-16 bg-white dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-amber-600 bg-amber-100 dark:bg-slate-800 px-3 py-1 rounded-full">Community Moments</span>
+                <h2 class="text-3xl font-heading font-bold text-slate-900 dark:text-white mt-2">Paws &amp; Tails Happy Guests</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=500&q=80" class="w-full h-48 object-cover rounded-2xl shadow hover:scale-105 transition-transform duration-300" alt="Dog play">
+                <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=500&q=80" class="w-full h-48 object-cover rounded-2xl shadow hover:scale-105 transition-transform duration-300" alt="Puppy portrait">
+                <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=500&q=80" class="w-full h-48 object-cover rounded-2xl shadow hover:scale-105 transition-transform duration-300" alt="Cat lounging">
+                <img src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?auto=format&fit=crop&w=500&q=80" class="w-full h-48 object-cover rounded-2xl shadow hover:scale-105 transition-transform duration-300" alt="Kitten sleeping">
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-16 bg-amber-50/50 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-amber-600 bg-amber-100 dark:bg-slate-800 px-3 py-1 rounded-full">Testimonials</span>
+                <h2 class="text-3xl font-heading font-bold text-slate-900 dark:text-white mt-2">What Pet Parents Say</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl border border-amber-100 dark:border-slate-700 shadow-sm">
+                    <div class="text-amber-500 text-sm mb-2">★★★★★</div>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 italic mb-4">"Paws &amp; Tails grooming staff are magical! My golden retriever returned home silky, fresh, and happy!"</p>
+                    <p class="font-bold text-slate-900 dark:text-white text-xs">— Sarah M.</p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl border border-amber-100 dark:border-slate-700 shadow-sm">
+                    <div class="text-amber-500 text-sm mb-2">★★★★★</div>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 italic mb-4">"Super fast express delivery for cat food and toys. Premium quality organic products every single time."</p>
+                    <p class="font-bold text-slate-900 dark:text-white text-xs">— David R.</p>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-3xl border border-amber-100 dark:border-slate-700 shadow-sm">
+                    <div class="text-amber-500 text-sm mb-2">★★★★★</div>
+                    <p class="text-xs text-slate-600 dark:text-slate-300 italic mb-4">"The vet checkup clinic was clean, caring, and gentle with our rescue kitten. Highly recommended!"</p>
+                    <p class="font-bold text-slate-900 dark:text-white text-xs">— Emily K.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                
+                <div class="space-y-6">
+                    <div>
+                        <span class="text-xs font-extrabold uppercase tracking-widest text-amber-600 bg-amber-100 dark:bg-slate-800 px-3 py-1 rounded-full">Paws &amp; Tails Store Info</span>
+                        <h2 class="text-3xl font-heading font-bold text-slate-900 dark:text-white mt-2">Get in Touch With Us</h2>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Visit our store, call us, or send a message for quick inquiries.</p>
+                    </div>
+
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-900 dark:text-white">Call Direct</p>
+                                <a href="tel:+15557297824" class="text-amber-600 dark:text-amber-400 font-semibold hover:underline">+1 (555) 729-7824</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center shrink-0">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-900 dark:text-white">WhatsApp Support</p>
+                                <a href="https://wa.me/15557297824" target="_blank" class="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline">Chat on WhatsApp</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-sky-500 text-white flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-900 dark:text-white">Store Address</p>
+                                <p class="text-slate-600 dark:text-slate-400">123 Pet Care Lane, Animalville, NY 10001</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-purple-500 text-white flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-900 dark:text-white">Working Hours</p>
+                                <p class="text-slate-600 dark:text-slate-400">Mon - Sat: 8:00 AM - 8:00 PM | Sun: 10:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50/50 dark:bg-slate-900 p-6 rounded-3xl border border-amber-100 dark:border-slate-800 shadow-md">
+                    <h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white mb-2"><i class="fa-solid fa-paper-plane text-amber-500 mr-2"></i> Send Message</h3>
+                    <form onsubmit="handleContactSubmit(event)" class="space-y-3">
+                        <div>
+                            <input type="text" required placeholder="Your Name" class="w-full px-3 py-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div>
+                            <input type="email" required placeholder="Your Email Address" class="w-full px-3 py-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div>
+                            <textarea rows="3" required placeholder="How can Paws & Tails help your pet?" class="w-full px-3 py-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 rounded-xl bg-amber-500 text-white font-bold text-xs uppercase tracking-wider shadow hover:bg-amber-600 transition-colors">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-10 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                <p class="font-bold text-white text-sm">Paws &amp; Tails Pet Shop &amp; Care Clinic</p>
+                <p class="text-slate-500 mt-1">&copy; 2026 Paws &amp; Tails. All Rights Reserved. Protected by HTTPS SSL Encryption.</p>
+            </div>
+            <div class="flex gap-4">
+                <a href="tel:+15557297824" class="hover:text-amber-400"><i class="fa-solid fa-phone mr-1"></i> Call Us</a>
+                <a href="https://wa.me/15557297824" target="_blank" class="hover:text-emerald-400"><i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+        <a href="https://wa.me/15557297824" target="_blank" class="w-12 h-12 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center text-2xl shadow-xl transition-all transform hover:scale-110" title="WhatsApp Chat">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+15557297824" class="w-12 h-12 rounded-full bg-amber-500 hover:bg-amber-600 text-white flex items-center justify-center text-xl shadow-xl transition-all transform hover:scale-110" title="Call Us">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Wishlist Modal -->
+    <div id="wishlistModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex justify-end">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-md h-full flex flex-col p-6 shadow-2xl">
+            <div class="flex justify-between items-center pb-4 border-b border-slate-100 dark:border-slate-800">
+                <h3 class="font-heading text-xl font-bold text-slate-900 dark:text-white"><i class="fa-solid fa-heart text-rose-500 mr-2"></i> Wishlist Items</h3>
+                <button onclick="toggleWishlistModal()" class="text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-xl"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="wishlistItemsList" class="flex-1 overflow-y-auto py-4 space-y-4 custom-scrollbar">
+                <!-- Javascript Wishlist Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex justify-end">
+        <div class="bg-white dark:bg-slate-900 w-full max-w-md h-full flex flex-col p-6 shadow-2xl">
+            <div class="flex justify-between items-center pb-4 border-b border-slate-100 dark:border-slate-800">
+                <h3 class="font-heading text-xl font-bold text-slate-900 dark:text-white"><i class="fa-solid fa-basket-shopping text-amber-500 mr-2"></i> Paws &amp; Tails Cart</h3>
+                <button onclick="toggleCartModal()" class="text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-xl"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div id="cartItemsList" class="flex-1 overflow-y-auto py-4 space-y-4 custom-scrollbar">
+                <!-- Javascript Cart Items -->
+            </div>
+
+            <div class="pt-4 border-t border-slate-100 dark:border-slate-800 space-y-3">
+                <div class="flex gap-2">
+                    <input type="text" id="promoCodeInput" placeholder="Promo Code (PAWS20)" class="flex-1 px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs text-slate-800 dark:text-slate-100 focus:outline-none">
+                    <button onclick="applyPromoCode()" class="px-3 py-2 bg-slate-900 dark:bg-slate-700 text-white rounded-xl text-xs font-bold">Apply</button>
+                </div>
+                <div class="space-y-1 text-xs">
+                    <div class="flex justify-between text-slate-500"><span>Subtotal:</span><span id="cartSubtotal">$0.00</span></div>
+                    <div class="flex justify-between text-slate-500"><span>Discount:</span><span id="cartDiscount" class="text-emerald-500">-$0.00</span></div>
+                    <div class="flex justify-between font-bold text-base text-slate-900 dark:text-white pt-2 border-t border-slate-100 dark:border-slate-800">
+                        <span>Total:</span><span id="cartTotal" class="text-amber-600 dark:text-amber-400">$0.00</span>
+                    </div>
+                </div>
+                <button onclick="checkoutCart()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-brand-500 hover:from-amber-600 hover:to-brand-600 text-white font-bold text-sm shadow-md">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div id="quickViewModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full p-6 shadow-2xl relative border border-amber-100 dark:border-slate-800">
+            <button onclick="closeQuickView()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-xl"><i class="fa-solid fa-xmark"></i></button>
+            <div id="quickViewContent" class="grid md:grid-cols-2 gap-6 items-center">
+                <!-- Quick View Javascript Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-md w-full p-6 shadow-2xl relative border border-amber-100 dark:border-slate-800">
+            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-xl"><i class="fa-solid fa-xmark"></i></button>
+            
+            <h3 class="font-heading text-xl font-bold text-slate-900 dark:text-white mb-1"><i class="fa-solid fa-scissors text-amber-500 mr-2"></i> Book Appointment</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Paws &amp; Tails Spa Grooming &amp; Veterinary Clinic</p>
+
+            <form onsubmit="handleBookingSubmit(event)" class="space-y-3">
+                <div>
+                    <label class="block text-[11px] font-bold uppercase text-slate-500 mb-1">Your Name</label>
+                    <input type="text" required placeholder="Alex Smith" class="w-full px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500">
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase text-slate-500 mb-1">Phone</label>
+                        <input type="tel" required placeholder="(555) 000-0000" class="w-full px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase text-slate-500 mb-1">Pet Type</label>
+                        <select class="w-full px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            <option>Dog</option>
+                            <option>Cat</option>
+                            <option>Bird</option>
+                            <option>Small Pet</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[11px] font-bold uppercase text-slate-500 mb-1">Service</label>
+                    <select id="bookingServiceSelect" class="w-full px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        <option>Grooming Spa &amp; Bath</option>
+                        <option>Vet Wellness Checkup</option>
+                        <option>Pet Boarding Hotel</option>
+                    </select>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase text-slate-500 mb-1">Date</label>
+                        <input type="date" required class="w-full px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase text-slate-500 mb-1">Time Slot</label>
+                        <select class="w-full px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            <option>09:00 AM</option>
+                            <option>11:30 AM</option>
+                            <option>02:00 PM</option>
+                            <option>04:30 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="w-full py-3 rounded-xl bg-amber-500 text-white font-bold text-xs uppercase tracking-wider shadow-md hover:bg-amber-600 transition-colors mt-2">
+                    Confirm Reservation
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Adoption Inquiry Modal -->
+    <div id="adoptionModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-md w-full p-6 shadow-2xl relative border border-amber-100 dark:border-slate-800">
+            <button onclick="closeAdoptionModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 text-xl"><i class="fa-solid fa-xmark"></i></button>
+            <h3 class="font-heading text-xl font-bold text-slate-900 dark:text-white mb-1"><i class="fa-solid fa-heart text-rose-500 mr-2"></i> Adoption Inquiry</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">You are inquiring about adopting <span id="adoptPetName" class="font-bold text-amber-600"></span></p>
+
+            <form onsubmit="handleAdoptionSubmit(event)" class="space-y-3">
+                <input type="text" required placeholder="Your Full Name" class="w-full px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500">
+                <input type="tel" required placeholder="Phone Number" class="w-full px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500">
+                <textarea rows="3" required placeholder="Tell us about your home setup and pet experience..." class="w-full px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                <button type="submit" class="w-full py-3 rounded-xl bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider shadow">Submit Adoption Application</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 left-6 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl hidden items-center gap-3 z-50 text-xs font-semibold border border-amber-500/30">
+        <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
+        <span id="toastMessage">Action completed successfully!</span>
+    </div>
+
+    <script>
+        // Paws & Tails Expanded Store Dataset
+        const products = [
+            { id: 1, name: 'Paws & Tails High-Protein Dog Kibble', category: 'dogs', price: 29.99, rating: 5, image: 'https://images.unsplash.com/photo-1589924691995-400dc9ecc119?auto=format&fit=crop&w=500&q=80', desc: 'Grain-free organic kibble enriched with salmon oil for strong joints and coat health.' },
+            { id: 2, name: 'Orthopedic Dog Cushion Bed', category: 'dogs', price: 49.99, rating: 5, image: 'https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?auto=format&fit=crop&w=500&q=80', desc: 'Waterproof washable memory foam bed for maximum canine comfort.' },
+            { id: 3, name: 'Feather Wand Interactive Cat Teaser', category: 'cats', price: 11.99, rating: 5, image: 'https://images.unsplash.com/photo-1545249390-6bdfa286032f?auto=format&fit=crop&w=500&q=80', desc: 'Flexible spring wand with non-toxic natural feathers for playful cats.' },
+            { id: 4, name: 'Salmon & Tuna Wet Cat Paté Pack', category: 'cats', price: 18.50, rating: 4, image: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=500&q=80', desc: 'Delicious seafood paté crafted for optimal feline hydration and digestion.' },
+            { id: 5, name: 'Enriched Fortified Bird Seed Blend', category: 'birds', price: 12.99, rating: 4, image: 'https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=500&q=80', desc: 'Multi-seed blend with dried fruit bits for parrots, parakeets, and finches.' },
+            { id: 6, name: 'Multi-Level Wooden Bird Gym Swing', category: 'birds', price: 24.99, rating: 5, image: 'https://images.unsplash.com/photo-1522858547137-f1dcec554f55?auto=format&fit=crop&w=500&q=80', desc: 'Handcrafted chewable wooden ladder and ringing bell perch.' },
+            { id: 7, name: 'Premium Timothy Hay Box', category: 'small', price: 14.99, rating: 5, image: 'https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&w=500&q=80', desc: 'Sun-cured fiber-rich timothy hay ideal for rabbits, hamsters, and guinea pigs.' },
+            { id: 8, name: 'Silent Spinner Hamster Wheel', category: 'small', price: 16.50, rating: 4, image: 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=500&q=80', desc: 'Whisper-quiet dual ball-bearing exercise wheel for small pets.' },
+            { id: 9, name: 'Tropical Fish Flake Supreme', category: 'fish', price: 8.99, rating: 5, image: 'https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?auto=format&fit=crop&w=500&q=80', desc: 'Color-enhancing daily flake formula for vibrant aquarium tropical fish.' },
+            { id: 10, name: 'Submersible LED Aquarium Kit', category: 'fish', price: 65.00, rating: 5, image: 'https://images.unsplash.com/photo-1520301251430-81f13a078021?auto=format&fit=crop&w=500&q=80', desc: 'Full 10-gallon glass tank setup with filtration system and ambient RGB LED.' },
+            { id: 11, name: 'Herbal Aloe Pet Shampoo', category: 'dogs', price: 15.99, rating: 5, image: 'https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?auto=format&fit=crop&w=500&q=80', desc: 'Hypoallergenic de-shedding shampoo with aloe vera and coconut oil.' },
+            { id: 12, name: 'Durable Rubber Chew Bone', category: 'dogs', price: 9.99, rating: 4, image: 'https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?auto=format&fit=crop&w=500&q=80', desc: 'Indestructible non-toxic rubber chew toy that cleans teeth during play.' }
+        ];
+
+        let currentCategory = 'all';
+        let cart = JSON.parse(localStorage.getItem('pt_cart')) || [];
+        let wishlist = JSON.parse(localStorage.getItem('pt_wishlist')) || [];
+        let activeDiscount = 0;
+
+        // Render Product Cards
+        function renderProducts(items) {
+            const grid = document.getElementById('productGrid');
+            document.getElementById('productCountLabel').innerText = `Showing ${items.length} item(s)`;
+
+            if(items.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-400 font-bold">No products match your search/filter criteria!</div>`;
+                return;
+            }
+
+            grid.innerHTML = items.map(p => {
+                const isWish = wishlist.some(item => item.id === p.id);
+                return `
+                    <div class="product-card bg-white dark:bg-slate-900 rounded-3xl border border-amber-100 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col justify-between relative group">
+                        
+                        <button onclick="toggleWishlist(${p.id})" class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-white/90 dark:bg-slate-800/90 shadow text-rose-500 flex items-center justify-center transition-transform hover:scale-110">
+                            <i class="${isWish ? 'fa-solid' : 'fa-regular'} fa-heart text-sm"></i>
+                        </button>
+
+                        <div>
+                            <div class="h-48 overflow-hidden bg-slate-50 dark:bg-slate-800 relative cursor-pointer" onclick="openQuickView(${p.id})">
+                                <img src="${p.image}" alt="${p.name}" class="product-img w-full h-full object-cover transition-transform duration-300">
+                                <span class="absolute bottom-2 left-2 bg-slate-900/70 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Quick View</span>
+                            </div>
+                            <div class="p-5">
+                                <div class="text-amber-500 text-xs mb-1">${'★'.repeat(p.rating)}</div>
+                                <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">${p.name}</h3>
+                                <p class="text-amber-600 dark:text-amber-400 font-extrabold text-base">$${p.price.toFixed(2)}</p>
+                            </div>
+                        </div>
+
+                        <div class="p-5 pt-0">
+                            <button onclick="addToCart(${p.id})" class="w-full py-2.5 rounded-xl bg-amber-50 dark:bg-slate-800 hover:bg-amber-500 hover:text-white text-amber-600 dark:text-amber-300 font-bold text-xs transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Search & Filter Operations
+        function handleSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            document.getElementById('clearSearchBtn').classList.toggle('hidden', query === '');
+            const filtered = products.filter(p => p.name.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query));
+            renderProducts(filtered);
+        }
+
+        function handleMobileSearch() {
+            const query = document.getElementById('mobileSearchInput').value.toLowerCase();
+            const filtered = products.filter(p => p.name.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query));
+            renderProducts(filtered);
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('clearSearchBtn').classList.add('hidden');
+            filterCategory(currentCategory);
+        }
+
+        function filterCategory(cat, evt) {
+            currentCategory = cat;
+            document.querySelectorAll('.cat-filter-btn').forEach(btn => {
+                btn.classList.remove('bg-amber-500', 'text-white');
+                btn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+            });
+            if(evt && evt.currentTarget) {
+                evt.currentTarget.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+                evt.currentTarget.classList.add('bg-amber-500', 'text-white');
+            }
+            const filtered = cat === 'all' ? products : products.filter(p => p.category === cat);
+            renderProducts(filtered);
+        }
+
+        function handleSortChange() {
+            const val = document.getElementById('sortSelect').value;
+            let sorted = [...products];
+            if(currentCategory !== 'all') sorted = sorted.filter(p => p.category === currentCategory);
+
+            if(val === 'low') sorted.sort((a,b) => a.price - b.price);
+            else if(val === 'high') sorted.sort((a,b) => b.price - a.price);
+            else if(val === 'rating') sorted.sort((a,b) => b.rating - a.rating);
+
+            renderProducts(sorted);
+        }
+
+        // Wishlist Functions
+        function toggleWishlist(id) {
+            const p = products.find(item => item.id === id);
+            const index = wishlist.findIndex(item => item.id === id);
+            if(index > -1) {
+                wishlist.splice(index, 1);
+                showToast('Removed from Wishlist');
+            } else {
+                wishlist.push(p);
+                showToast('Added to Wishlist!');
+            }
+            localStorage.setItem('pt_wishlist', JSON.stringify(wishlist));
+            updateWishlistUI();
+            renderProducts(products);
+        }
+
+        function updateWishlistUI() {
+            document.getElementById('wishlistCount').innerText = wishlist.length;
+            const container = document.getElementById('wishlistItemsList');
+            if(wishlist.length === 0) {
+                container.innerHTML = `<p class="text-center text-slate-400 py-12 text-xs font-bold">Your wishlist is empty!</p>`;
+                return;
+            }
+            container.innerHTML = wishlist.map(p => `
+                <div class="flex items-center justify-between gap-3 bg-slate-50 dark:bg-slate-800 p-3 rounded-2xl border border-slate-100 dark:border-slate-700">
+                    <img src="${p.image}" class="w-12 h-12 rounded-xl object-cover">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-xs text-slate-900 dark:text-white">${p.name}</h4>
+                        <p class="text-amber-600 dark:text-amber-400 font-bold text-xs">$${p.price.toFixed(2)}</p>
+                    </div>
+                    <button onclick="addToCart(${p.id})" class="text-xs text-amber-500 font-bold"><i class="fa-solid fa-basket-shopping"></i></button>
+                    <button onclick="toggleWishlist(${p.id})" class="text-xs text-rose-400"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            `).join('');
+        }
+
+        // Cart Functions
+        function addToCart(id) {
+            const p = products.find(item => item.id === id);
+            const exist = cart.find(item => item.id === id);
+            if(exist) exist.qty += 1;
+            else cart.push({ ...p, qty: 1 });
+
+            localStorage.setItem('pt_cart', JSON.stringify(cart));
+            updateCartUI();
+            showToast(`Added ${p.name} to Cart!`);
+        }
+
+        function updateCartQty(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if(item) {
+                item.qty += delta;
+                if(item.qty <= 0) cart = cart.filter(i => i.id !== id);
+            }
+            localStorage.setItem('pt_cart', JSON.stringify(cart));
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const totalQty = cart.reduce((acc, i) => acc + i.qty, 0);
+            document.getElementById('cartCount').innerText = totalQty;
+            const container = document.getElementById('cartItemsList');
+
+            if(cart.length === 0) {
+                container.innerHTML = `<p class="text-center text-slate-400 py-12 text-xs font-bold">Your cart is empty!</p>`;
+                document.getElementById('cartSubtotal').innerText = '$0.00';
+                document.getElementById('cartDiscount').innerText = '-$0.00';
+                document.getElementById('cartTotal').innerText = '$0.00';
+                return;
+            }
+
+            let subtotal = 0;
+            container.innerHTML = cart.map(item => {
+                subtotal += item.price * item.qty;
+                return `
+                    <div class="flex items-center justify-between gap-3 bg-slate-50 dark:bg-slate-800 p-3 rounded-2xl border border-slate-100 dark:border-slate-700">
+                        <img src="${item.image}" class="w-12 h-12 rounded-xl object-cover">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-xs text-slate-900 dark:text-white">${item.name}</h4>
+                            <p class="text-amber-600 dark:text-amber-400 font-bold text-xs">$${item.price.toFixed(2)}</p>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white dark:bg-slate-900 px-2 py-1 rounded-lg border border-slate-200 dark:border-slate-700 text-xs">
+                            <button onclick="updateCartQty(${item.id}, -1)" class="font-bold text-slate-500">-</button>
+                            <span class="font-bold">${item.qty}</span>
+                            <button onclick="updateCartQty(${item.id}, 1)" class="font-bold text-slate-500">+</button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            const discountVal = subtotal * activeDiscount;
+            const finalTotal = subtotal - discountVal;
+
+            document.getElementById('cartSubtotal').innerText = `$${subtotal.toFixed(2)}`;
+            document.getElementById('cartDiscount').innerText = `-$${discountVal.toFixed(2)}`;
+            document.getElementById('cartTotal').innerText = `$${finalTotal.toFixed(2)}`;
+        }
+
+        function applyPromoCode() {
+            const code = document.getElementById('promoCodeInput').value.trim().toUpperCase();
+            if(code === 'PAWS20') {
+                activeDiscount = 0.20;
+                showToast('20% Promo Discount Applied!');
+            } else {
+                showToast('Invalid Code! Try PAWS20');
+            }
+            updateCartUI();
+        }
+
+        function checkoutCart() {
+            if(cart.length === 0) return showToast('Your cart is empty!');
+            showToast('Order Placed Successfully! Thank you.');
+            cart = [];
+            localStorage.removeItem('pt_cart');
+            updateCartUI();
+            toggleCartModal();
+        }
+
+        // Modal Helpers
+        function toggleCartModal() { document.getElementById('cartModal').classList.toggle('hidden'); }
+        function toggleWishlistModal() { document.getElementById('wishlistModal').classList.toggle('hidden'); }
+
+        function openQuickView(id) {
+            const p = products.find(i => i.id === id);
+            document.getElementById('quickViewContent').innerHTML = `
+                <img src="${p.image}" class="w-full h-64 object-cover rounded-2xl">
+                <div>
+                    <span class="text-[10px] font-bold text-emerald-600 bg-emerald-100 px-2.5 py-0.5 rounded-full">In Stock</span>
+                    <h3 class="font-heading font-bold text-xl text-slate-900 dark:text-white mt-2">${p.name}</h3>
+                    <p class="text-amber-600 font-extrabold text-2xl my-2">$${p.price.toFixed(2)}</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">${p.desc}</p>
+                    <button onclick="addToCart(${p.id}); closeQuickView();" class="w-full py-3 rounded-xl bg-amber-500 text-white font-bold text-xs uppercase">Add to Cart</button>
+                </div>
+            `;
+            document.getElementById('quickViewModal').classList.remove('hidden');
+        }
+        function closeQuickView() { document.getElementById('quickViewModal').classList.add('hidden'); }
+
+        function openBookingModal(svc = 'Grooming Spa & Bath') {
+            document.getElementById('bookingServiceSelect').value = svc;
+            document.getElementById('bookingModal').classList.remove('hidden');
+        }
+        function closeBookingModal() { document.getElementById('bookingModal').classList.add('hidden'); }
+
+        function openAdoptionModal(pet) {
+            document.getElementById('adoptPetName').innerText = pet;
+            document.getElementById('adoptionModal').classList.remove('hidden');
+        }
+        function closeAdoptionModal() { document.getElementById('adoptionModal').classList.add('hidden'); }
+
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            closeBookingModal();
+            showToast('Appointment Reservation Received!');
+            e.target.reset();
+        }
+
+        function handleAdoptionSubmit(e) {
+            e.preventDefault();
+            closeAdoptionModal();
+            showToast('Adoption Application Received!');
+            e.target.reset();
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            showToast('Message Sent to Paws & Tails!');
+            e.target.reset();
+        }
+
+        // Quiz Logic
+        function selectQuizOption(cat) {
+            document.getElementById('quizStep1').classList.add('hidden');
+            document.getElementById('quizResult').classList.remove('hidden');
+            filterCategory(cat);
+        }
+
+        function resetQuiz() {
+            document.getElementById('quizResult').classList.add('hidden');
+            document.getElementById('quizStep1').classList.remove('hidden');
+            filterCategory('all');
+        }
+
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMessage').innerText = msg;
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('flex');
+            }, 3000);
+        }
+
+        // Mobile Nav Event Listeners
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => document.getElementById('mobileMenu').classList.add('hidden'));
+        });
+
+        // Initialize Store
+        renderProducts(products);
+        updateCartUI();
+        updateWishlistUI();
+    </script>
+</body>
+</html>
+```
